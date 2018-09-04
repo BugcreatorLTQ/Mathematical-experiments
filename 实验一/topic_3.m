@@ -1,3 +1,4 @@
+subplot(1,1,1);
 u=0:0.01:2*pi;
 v=u;
 [u v] = meshgrid(u,v);
