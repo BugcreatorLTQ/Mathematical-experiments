@@ -84,3 +84,7 @@ range_y(2)=max(points.y);
 fx=int((y+4)-y^2/2,x,range_x(1),range_x(2));
 fy=int(fx,y,range_y(1),range_y(2));
 result=vpa(fy)
+disp('topic_8');
+clear;
+syms x r R;
+result=int(R^2-r^2,r,0,R)
