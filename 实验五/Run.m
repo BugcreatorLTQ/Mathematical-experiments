@@ -17,3 +17,4 @@ L=zeros(2,1);
 [x fval]=linprog(c,A,b,[],[],L);
 z=-fval
 disp('topic_3');
+Topic_3;
