@@ -18,3 +18,9 @@ L=zeros(2,1);
 z=-fval
 disp('topic_3');
 Topic_3;
+disp('topic_4');
+load('Data.mat');
+c=-c;
+[x fval] = linprog(c,A,b);
+x
+val = -fval
