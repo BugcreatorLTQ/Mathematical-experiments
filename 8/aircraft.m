@@ -7,6 +7,6 @@ function f = aircraft(t, x)
   k = 0.4;
   f = [...
   x(2)
-  (F - m*g - k*(x(2)^2))/m
+  (F - k*(x(2)^2))/(m - 18*t) - g
   ];
 end

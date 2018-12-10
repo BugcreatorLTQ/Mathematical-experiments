@@ -21,7 +21,7 @@ title('相干图(无人工干涉)');
 %人工干涉
 [t, x] = ode45('shierPlus',[0, 15], [25, 2]);
 subplot(1,2,1);
-plot(t, x(:,1));
+plot(t, x(:,1), '-', t, x(:,2), '*');
 title('食饵—捕食系统(人工干涉)');
 legend('食饵','捕食者');
 subplot(1,2,2);
@@ -34,7 +34,7 @@ plot(t, x(:, 1), ':', t, x(:, 2));
 title('种群竞争模型');
 legend('种群A','种群B');
 disp('topic_4');
-%dsolve('D2y = x + y - 2','y(0)=2','Dy(0)=1');
+result = dsolve('D2y = x + y - 2','y(0)=2','Dy(0)=1')
 obj = 5;
 [x, y] = ode45('fun', [0, obj], [2, 1]);
 obj_val = y(end)
@@ -57,6 +57,6 @@ subplot(3,1,3);
   F = 32000;
   g = 9.8;
   k = 0.4;
-a = (F - m*g - k*(x(:,2).^2))/m;
+a = (F  - k*(x(:,2).^2))./(m - 18*t) - g;
 plot(t, a);
 title('加速度');
